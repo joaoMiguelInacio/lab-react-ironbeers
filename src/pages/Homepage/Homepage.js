@@ -1,12 +1,10 @@
 import { Link } from "react-router-dom";
-import "./Homepage.css";
+import "./HomePage.css";
 
 const Homepage = () => {
   return (
     <div className="home-container">
-      <Link 
-        to={`/beers`}
-        className="small-home-container">
+      <Link to={`/beers`} className="small-home-container">
         <img
           className="home-img"
           src="https://res.cloudinary.com/dvru7nv6q/image/upload/v1656699558/Random/beers_ln3wox.png"
@@ -19,9 +17,7 @@ const Homepage = () => {
           id bibendum mollis.
         </p>
       </Link>
-      <Link
-        to={`/random-beer`}
-        className="small-home-container">
+      <Link to={`/random-beer`} className="small-home-container">
         <img
           className="home-img"
           src="https://res.cloudinary.com/dvru7nv6q/image/upload/v1656699554/Random/new-beer_pnbmzi.png"
@@ -34,9 +30,7 @@ const Homepage = () => {
           id bibendum mollis.
         </p>
       </Link>
-      <Link
-        to={`/new-beer`}
-        className="small-home-container">
+      <Link to={`/new-beer`} className="small-home-container">
         <img
           className="home-img"
           src="https://res.cloudinary.com/dvru7nv6q/image/upload/v1656699556/Random/random-beer_ahgr5g.png"
@@ -47,7 +41,7 @@ const Homepage = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
           pharetra nisl eros, et molestie metus aliquet ut. Mauris mattis odio
           id bibendum mollis.
-        </p>{" "}
+        </p>
       </Link>
     </div>
   );
