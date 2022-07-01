@@ -9,3 +9,7 @@
     position: fixed;
     top:0;
 }
+
+.divider {
+    margin-top: 10vh;
+}

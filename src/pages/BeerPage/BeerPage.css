@@ -1,0 +1,27 @@
+.grey {
+    color: gray;
+}
+
+.normal {
+    font-weight: normal;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.beer-image {
+    display: block;
+    height: 35vh;
+    margin: 15vh auto 0 auto;
+}
+
+.text-container {
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
