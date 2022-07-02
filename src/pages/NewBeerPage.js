@@ -20,10 +20,6 @@ export default function BasicTextFields() {
   });
 
   const handleChange = (e) => {
-    console.log(e.target.name)
-    console.log(e.target.value)
-    console.log(values)
-    console.log(values.name)
     const { name, value } = e.target;
     setValues(({ ...values, [name]: value }));
   }
