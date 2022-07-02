@@ -1,4 +1,3 @@
-import { blueGrey } from "@mui/material/colors";
 import React from "react";
 import "./SingleBeer.css";
 

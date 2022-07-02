@@ -3,8 +3,9 @@ import React from 'react';
 import './App.css';
 import HomePage from "./pages/HomePage/HomePage";
 import BeersPage from "./pages/BeersPage/BeersPage";
-import BeerPage from "./pages/BeerPage";
+import SingleBeerPage from "./pages/SingleBeerPage";
 import RandomBeerPage from "./pages/RandomBeerPage";
+import NewBeerPage from "./pages/NewBeerPage";
 
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage/>} />
         <Route path="/beers" element={<BeersPage/>} />
-        <Route path="/:id" element={<BeerPage/>} />
+        <Route path="/:id" element={<SingleBeerPage/>} />
         <Route path="/random-beer" element={<RandomBeerPage/>} />
+        <Route path="/new-beer" element={<NewBeerPage/>} />
       </Routes>
     </>
   )
