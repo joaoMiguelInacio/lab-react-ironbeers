@@ -6,9 +6,10 @@ import React from 'react';
 import BeersList from "../../components/BeersList";
 import Header from "../../components/header/Header";
 
-
 const BeersPage = () => {
   const [ beers, setBeers ] = useState(null);
+  const [searchedString, setSearchedString] = useState("");
+
   useEffect(() => {
     const fecthBeers = async () => {
       try {
@@ -23,14 +24,23 @@ const BeersPage = () => {
   }, []);
 
   const displayBeers = () => {
-    return beers.map((beer) => (
+    return searchedBeers.map((beer) => (
       <BeersList {...beer} key={beer._id}/>
     ))
-  }
+  };
+
+  let searchedBeers = null
+	if (searchedString !== "") {
+		searchedBeers = beers.filter((beer) => {
+			return beer.name.toLowerCase().includes(searchedString.toLowerCase())
+		});
+	} else {
+		searchedBeers = beers;
+	}
+
   return (
     <>
-    <Header />
-    <p className="divider"></p>
+    <Header setSearchedString = {setSearchedString} searchedString = {searchedString} />
     {
       beers 
       ? displayBeers()
