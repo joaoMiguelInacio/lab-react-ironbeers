@@ -5,6 +5,7 @@ import ProgressIndicator from "../../components/ProgressIndicator";
 import React from 'react';
 import BeersList from "../../components/BeersList";
 import Header from "../../components/header/Header";
+import Search from "@mui/icons-material/Search";
 
 const BeersPage = () => {
   const [ beers, setBeers ] = useState(null);
@@ -38,9 +39,11 @@ const BeersPage = () => {
 		searchedBeers = beers;
 	}
 
+  const search = true;
+
   return (
     <>
-    <Header setSearchedString = {setSearchedString} searchedString = {searchedString} />
+    <Header search = {search} setSearchedString = {setSearchedString} searchedString = {searchedString} />
     {
       beers 
       ? displayBeers()
