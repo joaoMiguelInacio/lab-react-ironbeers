@@ -11,11 +11,12 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<HomePage/>} />
-        <Route path="/beers" element={<BeersPage/>} />
+        {/* Routes should be ordered from the more specific ones to the more vague ones, to avoid routing errors */}
         <Route path="/:id" element={<SingleBeerPage/>} />
+        <Route path="/beers" element={<BeersPage/>} />
         <Route path="/random-beer" element={<RandomBeerPage/>} />
         <Route path="/new-beer" element={<NewBeerPage/>} />
+        <Route path="/" element={<HomePage/>} />
       </Routes>
     </>
   )
